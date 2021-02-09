@@ -14,4 +14,7 @@ def getupdates():
     return respons_getUpdates.json()['result'][-1]['message']
 
 
-pprint(getupdates())
+# pprint(getupdates())
+
+msg_id = getupdates()['from']['id']
+pprint(msg_id)
