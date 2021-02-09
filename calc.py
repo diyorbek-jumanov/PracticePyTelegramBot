@@ -17,4 +17,12 @@ def getupdates():
 # pprint(getupdates())
 
 msg_id = getupdates()['from']['id']
-pprint(msg_id)
+# pprint(msg_id)
+
+while True:
+    data = getupdates()
+    last_msg_id = data['from']['id']
+    # print(last_msg_id)
+    msg_text = data['text']
+    print(msg_text)
+    break
