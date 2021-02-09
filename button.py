@@ -20,4 +20,16 @@ def getupdates():
     return respons_getUpdates.json()
 
 
-pprint(getupdates())
+# pprint(getupdates())
+
+def sendMessage(idx, text):
+    url_sendMessage = f'https://api.telegram.org/bot{token}/sendMessage'
+    payload = {
+        'chat_id': idx,
+        'text': text
+    }
+    respons_sendMessage = requests.get(url=url_sendMessage, params=payload)
+
+
+sendMessage(1258594598, 'salom')
+
